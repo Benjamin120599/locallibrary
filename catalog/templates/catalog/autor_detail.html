@@ -1,0 +1,21 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <!--<h1>Autor: {{ autor.apellido }}, {{ autor.nombre }}</h1>-->
+    <h1>Autor: {{ autor }}</h1>
+    <hr>
+    <p class="text-muted"><strong></strong> {{autor.fecha_nacimiento}}</p>
+
+    <div style="margin-left:20px;margin-top:20px">
+        <h4>Libros</h4>
+
+        {% for libros in autor.book_set.all %}
+        <hr>
+            <a href="{{ libros.get_absolute_url }}"> {{ libros.titulo }} </a>
+
+            <p> {{ libros.descripcion }} </p>
+            
+        {% endfor %}
+    </div>
+    
+{% endblock %}
