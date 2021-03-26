@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'd40e!3f=b^3de-3se3w0)^cdiccau0
 #DEBUG = True
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['frozen-refuge-97315.herokuapp.com']
 
 
 # Application definition
